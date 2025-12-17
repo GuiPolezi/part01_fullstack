@@ -42,6 +42,7 @@ function App() {
       <Content parte1={partes[0]} parte2={partes[1]} parte3={partes[2]}
         exercises1={exercises[0]} exercises2={exercises[1]} exercises3={exercises[2]}
       />
+      <Total total={exercises[0] + exercises[1] + exercises[2]}/>
     </div>
   )
 }
@@ -76,4 +77,13 @@ function Content(props) {
     </>
   )
 
+}
+
+function Total(props) {
+  console.log(props)
+  return (
+    <>
+      <p>Total de exercícios: {props.total}</p>
+    </>
+  )
 }
